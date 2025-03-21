@@ -1,0 +1,10 @@
+target_path: "build/Release/example/DummyFunc"
+target_args:
+  - "--option1"
+  - "value"
+proc_count: 2
+shm_key: "erdtree_shm"
+shm_size: 4096
+max_restarts: 5
+restart_interval_sec: 2
+pid_file: "/var/run/erdtree.pid"

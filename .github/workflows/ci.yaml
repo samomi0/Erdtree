@@ -1,0 +1,19 @@
+name: ci 
+on:
+  push:
+    branches:
+      - master 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get Conan
+        uses: turtlebrowser/get-conan@v1.0
+      
+      - name: Create default profile
+        run: conan profile detect
+
+      - name: Conan Build
+        run: conan build . --build=missing
